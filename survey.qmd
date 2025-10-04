@@ -1,0 +1,1466 @@
+---
+# General Settings
+format: html
+echo: false
+warning: false
+
+# Theme Settings
+theme: sandstone
+barposition: top
+
+# Survey Settings
+
+auto-scroll: false
+highlight-unanswered: true
+all-questions-required: true
+highlight-color: blue
+capture-metadata: true
+use_cookies: false
+---
+
+```{r}
+library(surveydown)
+
+```
+
+::: {.sd_page id=info_souhlas}
+
+## Souhlas s účastí ve výzkumu v projektu ai:dolescence
+
+**OP:JAK MEDIS:ON Zprostředkovaná společnost podpořený MŠMT (CZ.02.01.01/00/23_025/0008713)**
+
+<div style="border: 2px solid black; padding: 10px; border-radius: 5px;">
+**Hlavní řešitel**: Tomáš Lintner, Ph.D., e-mail: tomas.lintner@mail.muni.cz, tel.: +420 771 296 248
+**Pracoviště:** Psychologický ústav AV ČR, v. v. i., Veveří 97, 602 00 Brno a Ústav pedagogických věd FF MU, Arna Nováka 1/1, 602 00 Brno  
+**Období řešení projektu: 10/2025 – 06/2026** </div>  
+<br>
+
+**Vážená paní učitelko / vážený pane učiteli**,
+
+škola, ve které vyučujete, se účastní veřejně prospěšného výzkumu, který realizuje tým výzkumníků z Psychologického ústavu Akademie věd České republiky, v.v.i., Filozofické fakulty a Fakulty sociálních studií Masarykovy univerzity a s podporou operačního programu Jan Amos Komenský v rámci projektu zprostředkovaná společnost (MEDIS:ON). Tohoto výzkumu se bude účastnit **více než 5000 žáků z 50 středních škol a jejich vyučující**.
+
+Dovolujeme si vás požádat o **souhlas s tím, abyste se zúčastnil/a tohoto dotazníkového šetření**. Materiál slouží jako informace pro vás o tom, čemu se výzkum bude věnovat a jak bude probíhat.
+
+**Co se bude při účasti ve výzkumu dít?** Výzkum proběhne ve dvou vlnách, přibližně s osmi měsíčním odstupem. V rámci výzkumu:
+
+* vyplníte online dotazník;
+* dotazník obsahuje demografické otázky, testy AI gramotnosti, otázky na postoje k AI, využívání AI, podporu k AI, akceptaci AI a sebedůvěru k AI.
+
+**V čem je to užitečné?** Projekt přispěje k:
+
+* vytvoření nástroje na měření AI gramotnosti;
+* pochopení postojů učitelů vůči AI;
+* identifikaci podpory k využívání AI, kterou učitelé potřebují
+
+Aby byl výzkum užitečný i pro samotné účastnící se školy, budeme školám poskytovat souhrnnou zpětnou vazbu o vybraných výsledcích školy (např. o celkové míře gramotnosti v oblasti umělé inteligence).
+
+**Rizika vyplývající z účasti na výzkumu**
+
+Účast ve výzkumu je dobrovolná, anonymizovaná a nepřináší žádná rizika, která by přesahovala rámec běžné školní výuky. Během **října 2025** vyučující, kteří se budou účastnit výzkumu, vyplní online dotazník. Dotazníkové šetření by mělo trvat **20 až 30 minut**.
+
+**Správa dat**
+
+Při odpovídání si vytvoříte jednoduchý **anonymní kód** založený na kombinaci písmen jména Vaší matky a přímení Vaší/Vašeho třídní(ho) učitele/ky ze základní školy, díky kterému výzkumníci propojí Vaše odpovědi z první a druhé vlny výzkumu. V jakékoli následné práci s daty tak nebudou mít výzkumníci k dispozici žádné Vaše identifikační údaje, nýbrž budou pracovat pouze s uvedeným anonymním kódem. 
+
+Výsledná plně anonymizovaná data mohou být následně sdílena ve vědecké komunitě, výhradně za účelem vědeckého výzkumu.
+
+
+**Dle Obecného nařízení o ochraně osobních údajů (EU 2016/679, GDPR)** máte právo: požadovat přístup k osobním údajům týkajícím se Vaší osoby, jejich opravu nebo výmaz, popřípadě omezení zpracování; podat stížnost dozorovému orgánu (Úřad pro ochranu osobních údajů) v případě, že se domníváte, že zpracování osobních údajů probíhá v rozporu s právními předpisy; souhlas se zpracováním osobních údajů udělený níže kdykoliv odvolat, aniž by za to hrozila jakákoliv sankce či znevýhodnění, a to oznámením na kontaktní údaje správce osobních údajů. Zákonnost zpracování údajů před odvoláním souhlasu tím není dotčena. Na základě výše uvedených informací zvolte, co platí:  
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'info_souhlas_1',
+  label = "*Souhlasím / Nesouhlasím* s účastí ve výzkumném projektu.",
+  option = c(
+    "Souhlasím" = "souhlasim",
+    "Nesouhlasím" = "nesouhlasim"
+  )
+)
+```
+
+```{r}
+sd_next(next_page = 'anoncode')
+```
+
+:::
+
+::: {.sd_page id=anoncode}
+
+### Anonymizační klíč
+
+Prvním krokem vyplňování dotazníku bude vytvoření anonymizačního klíče. Tento klíč si nyní vytvoříte sám/sama a bude sloužit ke spárování Vašich dnešních odpovědí s odpověďmi za několik měsíců, abychom nemuseli používat Vaše jméno a zachovali anonymitu. Klíč s nikým nesdílejte. Nemusíte si ho zapisovat ani pamatovat; stejným způsobem si ho vytvoříte znovu při dalším měření.
+
+Kód si vytvoříte z prvních dvou písmen křestního jména své matky a z prvních dvou písmen příjmení své třídní učitelky/učitele ze základní školy.
+
+::: {.callout-note title="Poznámka"}
+Pokud jméno začíná písmenem s diakritikou (např. Č, Ř, Ž), vyberte stejné písmeno **bez** diakritiky (Č → C, Ř → R, Ž → Z).
+:::
+
+```{r}
+# pouze písmena A–Z (velká písmena)
+letters_AZ <- setNames(LETTERS, LETTERS)
+```
+
+```{r}
+sd_question(
+  type  = "select",
+  id    = "anon_m1",
+  label = "První písmeno křestního jména Vaší matky",
+  option = letters_AZ
+)
+```
+
+```{r}
+sd_question(
+  type  = "select",
+  id    = "anon_m2",
+  label = "Druhé písmeno křestního jména Vaší matky",
+  option = letters_AZ
+)
+```
+
+```{r}
+sd_question(
+  type  = "select",
+  id    = "anon_t1",
+  label = "První písmeno příjmení Vaší třídní učitelky/učitele ze základní školy",
+  option = letters_AZ
+)
+```
+
+```{r}
+sd_question(
+  type  = "select",
+  id    = "anon_t2",
+  label = "Druhé písmeno příjmení Vaší třídní učitelky/učitele ze základní školy",
+  option = letters_AZ
+)
+```
+
+```{r}
+sd_next(next_page = 'demografie')
+```
+
+:::
+
+
+::: {.sd_page id=demografie}
+
+### V této části nám, prosím, poskytněte základní informace o sobě.
+
+```{r}
+sd_question(
+  type   = 'mc',
+  id     = 'gender',
+  label  = "**Jaké je Vaše pohlaví?**",
+  option = c(
+    "Žena"       = "zena",
+    "Muž"        = "muz",
+    "Nebinární"  = "nebinarni",
+    "Jiné"       = "jine"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = "text",
+  id    = "gender_jine_text",
+  label = "**Upřesněte „Jiné“:**",
+  placeholder = "Napište svou odpověď"
+)
+```
+
+```{r}
+sd_question(
+  type  = "numeric",
+  id    = "vek",
+  label = "**Kolik je Vám let?** (uveďte pouze celé číslo v letech, např. 46)"
+)
+```
+
+```{r}
+sd_question(
+  type  = 'mc_multiple',
+  id    = 'narodnost',
+  label = "**Jaká je Vaše národnost?**",
+  option = c(
+    "Česká"      = "ceska",
+    "Slovenská"  = "slovenska",
+    "Ukrajinská" = "ukrajinska",
+    "Jiná"       = "jina"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = "text",
+  id    = "narodnost_jina_text",
+  label = "**Upřesněte „Jiná“:**",
+  placeholder = "Napište svou odpověď"
+)
+```
+
+```{r}
+sd_question(
+  type   = 'mc',
+  id     = 'vzdelani',
+  label  = "**Jaké je Vaše nejvyšší DOKONČENÉ vzdělání?**",
+  option = c(
+    "Nižší než střední vzdělání",
+    "Středoškolské vzdělání (bez výučního listu a bez maturity)",
+    "Středoškolské vzdělání s výučním listem",
+    "Středoškolské vzdělání s maturitou",
+    "Vyšší odborné vzdělání na konzervatoři",
+    "Vyšší odborné vzdělání",
+    "Vysokoškolské vzdělání – bakalářský stupeň",
+    "Vysokoškolské vzdělání – magisterský stupeň",
+    "Vysokoškolské vzdělání – doktorský stupeň"
+  )
+)
+```
+
+
+```{r}
+sd_next(next_page = 'vyuka')
+```
+
+:::
+
+
+::: {.sd_page id=vyuka}
+
+### Následující otázky se věnují Vašemu působení na škole a charakteru Vaší výuky.
+
+```{r}
+sd_question(
+  type  = "text",
+  id    = "vyucovane_predmety",
+  label = "**Jaké předměty aktuálně vyučujete? Vepište prosím jejich celé názvy.** Pokud vyučujete více než jeden předmět, oddělte je prosím čárkou.",
+  placeholder = "Napište svou odpověď"
+)
+```
+
+```{r}
+sd_question(
+  type   = 'mc_multiple',
+  id     = 'kvalifikace',
+  label  = "**Jaké předměty nebo obory jste vystudoval(a) a/nebo pro které jste získal(a) kvalifikaci učit?** (vyberte všechny, pro které platí)",
+  option = c(
+    "český jazyk" = "cesky_jazyk",
+    "cizí jazyk" = "cizi_jazyk",
+    "matematika" = "matematika",
+    "informatika" = "informatika",
+    "dějepis" = "dějepis",
+    "základy společenských věd" = "ZSV",
+    "biologie" = "biologie",
+    "fyzika" = "fyzika",
+    "chemie" = "chemie",
+    "zeměpis" = "zemepis",
+    "tělesná výchova" = "TV",
+    "hudební výchova" = "HV",
+    "výtvarná výchova" = "VV",
+    "odborné předměty" = "odborne_predmety",
+    "jiný předmět" = "jiny_predmet"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = "text",
+  id    = "kvalifikace_cizi_jazyk_text",
+  label = "**Upřesněte jaký „Cizí jazyk“:**",
+  placeholder = "Napište svou odpověď"
+)
+```
+
+```{r}
+sd_question(
+  type  = "text",
+  id    = "kvalifikace_odborne_predmety_text",
+  label = "**Upřesněte jaké „Odborné předměty“** (uveďte, prosím, celý název):",
+  placeholder = "Napište svou odpověď"
+)
+```
+
+```{r}
+sd_question(
+  type  = "text",
+  id    = "kvalifikace_jiny_predmet_text",
+  label = "**Upřesněte jaký „Jiný předmět“** (uveďte, prosím, celý název):",
+  placeholder = "Napište svou odpověď"
+)
+```
+
+```{r}
+sd_question(
+  type   = 'mc_multiple',
+  id     = 'funkce',
+  label  = "**Vykonáváte na škole některou z následujících funkcí?** (vyberte všechny, které vykonáváte)",
+  option = c(
+    "školní metodik prevence" = "metodik_prevence",
+    "výchovný poradce" = "vychovny_poradce",
+    "kariérový poradce" = "karierovy_poradce",
+    "koordinátor ŠVP" = "koordinator_SVP",
+    "ICT koordinátor" = "ICT_koordinator",
+    "správce sociálních sítí a/nebo webových stránek školy" = "správce_webu",
+    "třídní učitel" = "tridni_ucitel",
+    "jiná funkce (uveďte prosím jakou)" = "jina",
+    "nevykonávám žádnou z těchto funkcí" = "zadna"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = "text",
+  id    = "funkce_jina_text",
+  label = "**Upřesněte „Jiná“:**",
+  placeholder = "Napište svou odpověď"
+)
+```
+
+```{r}
+sd_question(
+  type  = "numeric",
+  id    = "vek",
+  label = "**Kolik let jste učitelem/učitelkou?** Počítejte od doby, kdy jste na škole začali působit jako učitelé, nikoli asistenti pedagoga (tedy i v rámci pedagogických praxí navazujícího Mgr. studia). (uveďte pouze celé číslo v letech, např. 12)"
+)
+```
+
+```{r}
+sd_question(
+  type  = "numeric",
+  id    = "vek",
+  label = "**Kolikátý rok působíte na škole, na které nyní vyučujete?**"
+)
+```
+
+```{r}
+sd_question(
+  type  = "numeric",
+  id    = "vek",
+  label = "**Kolik hodin za týden odučíte?** (Pokud učíte např. jeden týden víc než druhý, vepište výši vašeho základního pedagogického úvazku na škole.)"
+)
+```
+
+```{r}
+sd_question(
+  type  = "numeric",
+  id    = "vek",
+  label = "**Kolik hodin průměrně za týden strávíte administrativní činností?** (např. vyplňování třídnice - zápis hodnocení do systému, evidence docházky; komunikace s rodiči/úřady; organizace školních akcí a exkurzí; komunikace s vedením školy...)"
+)
+```
+
+```{r}
+sd_question(
+  type  = "numeric",
+  id    = "vek",
+  label = "**Kolik hodin průměrně týdně věnujete nepřímé pedagogické činnosti?** (např. příprava podkladů na výuku, tvorba a oprava testů či úkolů, plánování učiva...) "
+)
+```
+
+
+```{r}
+sd_next(next_page = 'podpora_v_AI')
+```
+
+:::
+
+
+::: {.sd_page id=podpora_v_AI}
+
+### Nyní, prosím, odpovězte na otázky týkající se podpory v oblasti AI.
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_podpora_01',
+  label = "**Na mé škole s kolegy sdílíme výukové materiály a zkušenosti s využitím AI.**",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "spíše nesouhlasím"  = "2",
+    "ani nesouhlasím, ani souhlasím"  = "3",
+    "spíše souhlasím"  = "4",
+    "zcela souhlasím" = "5",
+    "nedokážu posoudit" = "6"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_podpora_02',
+  label = "**Vedení školy podporuje využívání AI ve výuce a práci učitele.**",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "spíše nesouhlasím"  = "2",
+    "ani nesouhlasím, ani souhlasím"  = "3",
+    "spíše souhlasím"  = "4",
+    "zcela souhlasím" = "5",
+    "nedokážu posoudit" = "6"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_podpora_03',
+  label = "**Moje škola má stanovena jasná pravidla či směrnice ohledně využívání AI.**",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "spíše nesouhlasím"  = "2",
+    "ani nesouhlasím, ani souhlasím"  = "3",
+    "spíše souhlasím"  = "4",
+    "zcela souhlasím" = "5",
+    "nedokážu posoudit" = "6"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_podpora_04',
+  label = "**Učitelé na škole se v rámci svého dalšího vzdělávání zaměřují na využití AI ve výuce.**",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "spíše nesouhlasím"  = "2",
+    "ani nesouhlasím, ani souhlasím"  = "3",
+    "spíše souhlasím"  = "4",
+    "zcela souhlasím" = "5",
+    "nedokážu posoudit" = "6"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = "numeric",
+  id    = "AI_skoleni",
+  label = "**Kolika školení nebo workshopů zaměřených na využití AI ve vzdělávání jste se zúčastnil/a za minulý školní rok?** (uveďte celé číslo, např. 3) "
+)
+```
+
+```{r}
+sd_question(
+  type  = "textarea",
+  id    = "AI_podpora_text",
+  label = "**Jaká podpora v oblasti AI by pro Vás byla užitečná, ale doposud jste se s ní nesetkal/a?** Popište prosím co nejpodrobněji."
+)
+```
+
+
+```{r}
+sd_next(next_page = 'vyuzivani_AI')
+```
+
+:::
+
+
+::: {.sd_page id=vyuzivani_AI}
+
+### Tato část se zaměřuje na využívání AI ve Vaší praxi.
+
+
+```{r}
+sd_question(
+  type   = "matrix",
+  id     = "AI_vyuzivani",
+  label  = "**Vyberte u každé otázky nejvhodnější možnost podle četnosti využití.**",
+  row    = c(
+    "Jak často využíváte AI v osobním životě?" = "01",
+    "Jak často využíváte AI přímo ve výuce s žáky?" = "02",
+    "Jak často využíváte AI k práci mimo výuku (např. administrativa, příprava materiálů do hodin)?" = "03"
+  ),
+  option = c(
+    "vůbec" = "1",
+    "několikrát za pololetí" = "2",
+    "několikrát do měsíce" = "3",
+    "několikrát do týdne" = "4",
+    "každý den" = "5"
+  )
+)
+```
+
+
+```{r}
+sd_question(
+  type   = "matrix",
+  id     = "AI_vyuzivani_nastroje1",
+  label  = "**Jak často využíváte následující typy AI nástrojů/technologií VE VAŠÍ PRÁCI jakožto učitele?**",
+  row    = c(
+    "Chatboti (např. ChatGPT, Gemini, Copilot...)." = "01",
+    "Adaptivní vzdělávací prostředí (Umime.to, Duolingo, Výuka na webu...)." = "02",
+    "Platformy pro tvorbu výukových lekcí a plánů (Sciobot, MagicSchool, LessonsPlan.ai...)." = "03",
+    "Nástroje pro zpětnou vazbu a hodnocení (Sherpa, Gradescope...)." = "04",
+    "Nástroje pro tvorbu testových a kvízových otázek (FormativeAI, Kahoot, Quizziz...)." = "05"
+  ),
+  option = c(
+    "neznám tento nástroj" = "1",
+    "vůbec"  = "2",
+    "několikrát za pololetí"  = "3",
+    "několikrát do měsíce"  = "4",
+    "několikrát do týdne" = "5",
+    "každý den" = "6"
+  )
+)
+```
+
+
+```{r}
+sd_question(
+  type   = "matrix",
+  id     = "AI_vyuzivani_nastroje2",
+  label  = "**Jak často využíváte následující typy AI nástrojů/technologií VE VAŠÍ PRÁCI jakožto učitele?**",
+  row    = c(
+    "Překladače nebo jazykové korektory (Grammarly, DeepL...)." = "06",
+    "Management třídy a chování žáků (ClassDojo, GoGuardian...)." = "07",
+    "Grafické editory a generátory obrázků (MS Designer, Canva, Midjourney...)." = "08",
+    "Imerzivní technologie (VR, AR…)." = "09",
+    "Integrované AI nástroje ve školních informačních systémech." = "10"
+  ),
+  option = c(
+    "neznám tento nástroj" = "1",
+    "vůbec"  = "2",
+    "několikrát za pololetí"  = "3",
+    "několikrát do měsíce"  = "4",
+    "několikrát do týdne" = "5",
+    "každý den" = "6"
+  )
+)
+```
+
+
+```{r}
+sd_question(
+  type   = "matrix",
+  id     = "AI_vyuzivani_ucely1",
+  label  = "**Jak často využíváte AI k následujícím činnostem?**",
+  row    = c(
+    "Personalizace výuky pro různé typy žáků (pro žáky s SVP, cizince, nadané...)." = "01",
+    "Tvorba výukových materiálů (prezentace, pracovní listy, videa...)." = "02",
+    "Generování testových otázek, kvízů, úloh na doma nebo do hodiny." = "03",
+    "Hodnocení žáků a poskytování zpětné vazby." = "04",
+    "Vlastní profesní rozvoj (vyhledávání informací, inspirace pro výuku, sebevzdělávání...)." = "05"
+  ),
+  option = c(
+    "vůbec"  = "1",
+    "několikrát za pololetí"  = "2",
+    "několikrát do měsíce"  = "3",
+    "několikrát do týdne" = "4",
+    "každý den" = "5"
+  )
+)
+```
+
+
+```{r}
+sd_question(
+  type   = "matrix",
+  id     = "AI_vyuzivani_ucely2",
+  label  = "**Jak často využíváte AI k následujícím činnostem?**",
+  row    = c(
+    "Tvorba ŠVP nebo dalších školních dokumentů." = "06",
+    "Rozvoj digitálních kompetencí žáků (práce s AI nástroji v hodině)." = "07",
+    "Administrativní úkoly (vyřizování e-mailů, třídní dokumentace...)." = "08",
+    "Tvorba záznamů o uskutečněných školních akcích (příspěvky na sociální sítě, webové stránky školy...)." = "09"
+  ),
+  option = c(
+    "vůbec"  = "1",
+    "několikrát za pololetí"  = "2",
+    "několikrát do měsíce"  = "3",
+    "několikrát do týdne" = "4",
+    "každý den" = "5"
+  )
+)
+```
+
+
+```{r}
+sd_next(next_page = 'prijeti_AI')
+```
+
+:::
+
+
+::: {.sd_page id=prijeti_AI}
+
+### Nyní Vás požádáme o vyjádření Vašich názorů ohledně AI nástrojů a technologií
+
+**Určete, nakolik s každým tvrzením souhlasíte nebo nesouhlasíte.** U každého tvrzení vybírejte z rozbalovací nabídky.
+
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_01',
+  label = "Nástroje AI považuji za užitečné pro svou výuku.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_02',
+  label = "Používání AI mi umožňuje vykonávat určité úkoly rychleji.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_03',
+  label = "Používání AI zvyšuje moji produktivitu.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_04',
+  label = "Využívání AI ve výuce zlepšuje moji práci jakožto učitele.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_05',
+  label = "Interakci s nástroji AI považuji za jasnou a srozumitelnou.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_06',
+  label = "Je pro mě snadné naučit se efektivně používat AI.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_07',
+  label = "Nástroje AI považuji za snadno použitelné.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_08',
+  label = "Naučit se používat AI je pro mě snadné.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_09',
+  label = "Lidé, kteří ovlivňují mé profesní rozhodování, si myslí, že bych měl/a používat AI.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_10',
+  label = "Lidé, na kterých mi záleží, si myslí, že bych měl/a používat AI.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_11',
+  label = "Vedení školy mi pomáhá s využíváním AI.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_12',
+  label = "Škola obecně podporuje využívání AI.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_13',
+  label = "Mám přístup k potřebným zdrojům pro používání nástrojů AI ve své práci.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_14',
+  label = "Mám potřebné znalosti k používání AI ve své práci.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_15',
+  label = "Nástroje AI nejsou kompatibilní s jinými nástroji, které používám ve své práci.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_16',
+  label = "Na škole je konkrétní osoba (nebo tým), která mi může pomoci s otázkami týkajícími se AI.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_17',
+  label = "V budoucnosti plánuji využívat AI jako běžnou součást výuky.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_18',
+  label = "Věřím, že si dokážu efektivně poradit s jakýmikoli situacemi souvisejícími s AI, které mohou ve výuce nastat.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_19',
+  label = "Vždy rád/a zapojuji nové AI technologie/nástroje do výuky svého předmětu.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'AI_prijeti_20',
+  label = "Těším se na využívání AI k podpoře mé výuky.",
+  option = c(
+    "zcela nesouhlasím" = "1",
+    "nesouhlasím" = "2",
+    "spíše nesouhlasím" = "3",
+    "ani nesouhlasím, ani souhlasím" = "4",
+    "spíše souhlasím" = "5",
+    "souhlasím" = "6",
+    "zcela souhlasím" = "7"
+  )
+)
+```
+
+
+```{r}
+sd_next(next_page = 'postoje_AI')
+```
+
+:::
+
+::: {.sd_page id=postoje_AI}
+
+### Zde Vás požádáme o několik dalších postojů ohledně AI nástrojů a technologií.
+
+```{r}
+sd_question(
+  type   = "matrix",
+  id     = "AI_postoje1",
+  label  = "**Určete, nakolik s každým tvrzením souhlasíte nebo nesouhlasíte.**",
+  row    = c(
+    "AI se dá využít na mnoho užitečných věcí." = "01",
+    "AI může mít pozitivní dopad na well-being (osobní pohodu) lidí." = "02",
+    "AI je vzrušující." = "03",
+    "Velká část společnosti bude těžit z širokého využívání AI v budoucnosti." = "04",
+    "Mrazí mě při pomyšlení na budoucí využití AI." = "05",
+    "Připadá mi, že AI má zlověstný charakter." = "06"
+  ),
+  option = c(
+    "zcela nesouhlasím"  = "1",
+    "spíše nesouhlasím"  = "2",
+    "ani nesouhlasím, ani souhlasím"  = "3",
+    "spíše souhlasím" = "4",
+    "zcela souhlasím" = "5"
+  )
+)
+```
+
+
+```{r}
+sd_question(
+  type   = "matrix",
+  id     = "AI_postoje2",
+  label  = "**Určete, nakolik s každým tvrzením souhlasíte nebo nesouhlasíte.**",
+  row    = c(
+    "AI by mohla převzít kontrolu nad lidmi." = "07",
+    "Myslím si, že AI je nebezpečná." = "08",
+    "Věřím, že AI může zlepšit kvalitu výuky." = "09",
+    "Domnívám se, že AI se v budoucnu stane nedílnou součástí vzdělávání." = "10",
+    "Obávám se, že AI nahradí lidský prvek ve výuce." = "11",
+    "Jsem nadšený/á z potenciálu AI personalizovat výuku pro mé žáky." = "12"
+  ),
+  option = c(
+    "zcela nesouhlasím"  = "1",
+    "spíše nesouhlasím"  = "2",
+    "ani nesouhlasím, ani souhlasím"  = "3",
+    "spíše souhlasím" = "4",
+    "zcela souhlasím" = "5"
+  )
+)
+```
+
+
+```{r}
+sd_next(next_page = 'selfefficacy_AI')
+```
+
+:::
+
+
+::: {.sd_page id=selfefficacy_AI}
+
+### V této části Vás požádáme, abyste ohodnotil/a, jak si věříte při používání různých nástrojů a funkcí založených na umělé inteligenci.
+
+```{r}
+sd_question(
+  type   = "matrix",
+  id     = "AI_selfefficacy1",
+  label  = "**Určete, nakolik s každým tvrzením souhlasíte nebo nesouhlasíte.**",
+  row    = c(
+    "Dokážu rozlišit, zda je určitá aplikace založena na AI, či nikoli." = "01",
+    "Dokážu vytvářet (výukový) obsah pomocí AI." = "02",
+    "Vím, jak vybírat vhodné AI aplikace pro řešení různých úkolů." = "03",
+    "Dokážu vybírat AI aplikace pro výuku ve třídě tak, aby podpořily, co a jak učím a co se naučí studenti." = "04",
+    "Dokážu vybírat AI aplikace pro výuku ve třídě tak, aby podpořily výuku obsahu konkrétních předmětů." = "05"
+  ),
+  option = c(
+    "zcela nesouhlasím"  = "1",
+    "spíše nesouhlasím"  = "2",
+    "ani nesouhlasím, ani souhlasím"  = "3",
+    "spíše souhlasím" = "4",
+    "zcela souhlasím" = "5"
+  )
+)
+```
+
+
+```{r}
+sd_question(
+  type   = "matrix",
+  id     = "AI_selfefficacy2",
+  label  = "**Určete, nakolik s každým tvrzením souhlasíte nebo nesouhlasíte.**",
+  row    = c(
+    "Dokážu vést výuku tak, aby vhodně propojovala obsah vyučovaného předmětu, metody výuky a využití AI." = "06",
+    "Dokážu hodnotit učení studentů pomocí AI." = "07",
+    "Dokážu vybrat vhodnou AI aplikaci pro podporu sebehodnocení studentů." = "08",
+    "Dokážu použít AI k hodnocení studentských úkolu." = "09"
+  ),
+  option = c(
+    "zcela nesouhlasím"  = "1",
+    "spíše nesouhlasím"  = "2",
+    "ani nesouhlasím, ani souhlasím"  = "3",
+    "spíše souhlasím" = "4",
+    "zcela souhlasím" = "5"
+  )
+)
+```
+
+
+```{r}
+sd_next(next_page = 'AItest_pokyny')
+```
+
+:::
+
+
+::: {.sd_page id=AItest_pokyny}
+
+### Nyní Vás bude čekat test AI gramotnosti.
+
+V této části nejde o Vaše názory či postoje, na každou otázku existuje pouze jedna správná odpověď. Sesbíraná data budou anonymizována.
+
+Během vyplňování mějte zavřená všechna ostatní okna a karty v prohlížeči. Odpovídejte samostatně a bez pomoci internetu.
+
+::: {.callout-note title="Pozor!"}
+**Berte na vědomí, že informace prezentované ve výzkumu nemusí být nutně pravdivé**
+:::
+
+
+```{r}
+sd_next(next_page = 'AItest1')
+```
+
+:::
+
+
+::: {.sd_page id=AItest1}
+
+```{r}
+sd_output(id = "AIq1", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest2')
+```
+
+:::
+
+
+::: {.sd_page id=AItest2}
+
+```{r}
+sd_output(id = "AIq2", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest3')
+```
+
+:::
+
+
+::: {.sd_page id=AItest3}
+
+```{r}
+sd_output(id = "AIq3", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest4')
+```
+
+:::
+
+
+::: {.sd_page id=AItest4}
+
+```{r}
+sd_output(id = "AIq4", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest5')
+```
+
+:::
+
+
+::: {.sd_page id=AItest5}
+
+```{r}
+sd_output(id = "AIq5", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest6')
+```
+
+:::
+
+
+::: {.sd_page id=AItest6}
+
+```{r}
+sd_output(id = "AIq6", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest7')
+```
+
+:::
+
+
+::: {.sd_page id=AItest7}
+
+```{r}
+sd_output(id = "AIq7", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest8')
+```
+
+:::
+
+
+::: {.sd_page id=AItest8}
+
+```{r}
+sd_output(id = "AIq8", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest9')
+```
+
+:::
+
+
+::: {.sd_page id=AItest9}
+
+```{r}
+sd_output(id = "AIq9", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest10')
+```
+
+:::
+
+
+::: {.sd_page id=AItest10}
+
+```{r}
+sd_output(id = "AIq10", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest11')
+```
+
+:::
+
+
+::: {.sd_page id=AItest11}
+
+```{r}
+sd_output(id = "AIq11", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest12')
+```
+
+:::
+
+
+::: {.sd_page id=AItest12}
+
+```{r}
+sd_output(id = "AIq12", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest13')
+```
+
+:::
+
+
+::: {.sd_page id=AItest13}
+
+```{r}
+sd_output(id = "AIq13", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest14')
+```
+
+:::
+
+
+::: {.sd_page id=AItest14}
+
+```{r}
+sd_output(id = "AIq14", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest15')
+```
+
+:::
+
+
+::: {.sd_page id=AItest15}
+
+```{r}
+sd_output(id = "AIq15", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest16')
+```
+
+:::
+
+
+::: {.sd_page id=AItest16}
+
+```{r}
+sd_output(id = "AIq16", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest17')
+```
+
+:::
+
+
+::: {.sd_page id=AItest17}
+
+```{r}
+sd_output(id = "AIq17", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest18')
+```
+
+:::
+
+
+::: {.sd_page id=AItest18}
+
+```{r}
+sd_output(id = "AIq18", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest19')
+```
+
+:::
+
+
+::: {.sd_page id=AItest19}
+
+```{r}
+sd_output(id = "AIq19", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest20')
+```
+
+:::
+
+
+::: {.sd_page id=AItest20}
+
+```{r}
+sd_output(id = "AIq20", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest21')
+```
+
+:::
+
+
+::: {.sd_page id=AItest21}
+
+```{r}
+sd_output(id = "AIq21", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest22')
+```
+
+:::
+
+
+::: {.sd_page id=AItest22}
+
+```{r}
+sd_output(id = "AIq22", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest23')
+```
+
+:::
+
+
+::: {.sd_page id=AItest23}
+
+```{r}
+sd_output(id = "AIq23", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest24')
+```
+
+:::
+
+
+::: {.sd_page id=AItest24}
+
+```{r}
+sd_output(id = "AIq24", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest25')
+```
+
+:::
+
+
+::: {.sd_page id=AItest25}
+
+```{r}
+sd_output(id = "AIq25", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest26')
+```
+
+:::
+
+
+::: {.sd_page id=AItest26}
+
+```{r}
+sd_output(id = "AIq26", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest27')
+```
+
+:::
+
+
+::: {.sd_page id=AItest27}
+
+```{r}
+sd_output(id = "AIq27", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest28')
+```
+
+:::
+
+
+::: {.sd_page id=AItest28}
+
+```{r}
+sd_output(id = "AIq28", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'AItest29')
+```
+
+:::
+
+
+::: {.sd_page id=AItest29}
+
+```{r}
+sd_output(id = "AIq29", type = "question")
+```
+
+```{r}
+sd_next(next_page = 'zaver')
+```
+
+:::
+
+
+::: {.sd_page id=zaver}
+
+**Děkujeme za vyplnění dotazníku! Jestli se chcete dozvědět o výsledcích výzkumu, sledujte web aidolescence.cz, kde budeme výsledky uvěřejňovat. Toto okno nyní můžete zavřít.**
+
+```{r}
+sd_close()
+```
+
+:::
